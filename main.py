@@ -1,7 +1,10 @@
-import optuna
-
 import numpy as np
 import pandas as pd
+import lightgbm as lgb
+import optuna
+import warnings
+warnings.filterwarnings('ignore')
+
 from pandas import DataFrame, Series
 
 from sklearn.model_selection import train_test_split, GridSearchCV
@@ -9,17 +12,13 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
-import lightgbm as lgb
 from sklearn.model_selection import train_test_split
-
-import warnings
-warnings.filterwarnings('ignore')
-
-from gc import collect                               
-from lightgbm import LGBMClassifier as LGBMC
-import optuna
-from optuna import Trial, trial, create_study
 from sklearn.metrics import fbeta_score
+
+from lightgbm import LGBMClassifier as LGBMC
+
+from optuna import Trial, trial, create_study
+
 
 
 #データセット
